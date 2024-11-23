@@ -1,6 +1,5 @@
 from modules import functions
 import time
-import json
 
 now = time.strftime("%b %d, %Y %H:%M:%S")
 print(now)
