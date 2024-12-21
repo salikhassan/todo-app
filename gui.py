@@ -28,11 +28,12 @@ list_box = gui.Listbox(values=functions.get_todos(), key='todos',
 # Setting the theme of the GUI
 gui.theme("Black")
 
+# Columns
+col1 = gui.Column([[label], [input_box], [list_box], [exit_button]])
+col2 = gui.Column([[add_button], [edit_button], [complete_button]])
+
 # The layout of the program. Text rows are separated based on the rows in the GUI
-layout = [[label],
-          [input_box, add_button],
-          [list_box, edit_button, complete_button],
-          [exit_button]]
+layout = [[col1, col2]]
 
 # The GUI window
 window = gui.Window("To-Do App",
